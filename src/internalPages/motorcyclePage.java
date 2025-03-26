@@ -66,6 +66,7 @@ public class motorcyclePage extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         customer_table = new javax.swing.JTable();
@@ -89,6 +90,10 @@ public class motorcyclePage extends javax.swing.JInternalFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IconsFolder/motor-100 3 - Copy.png"))); // NOI18N
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 110, 60));
+
         jPanel2.add(jPanel3);
         jPanel3.setBounds(540, 0, 160, 60);
 
@@ -360,6 +365,7 @@ public class motorcyclePage extends javax.swing.JInternalFrame {
     private javax.swing.JPanel edit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;

@@ -66,6 +66,7 @@ public class userPage extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         user_table = new javax.swing.JTable();
@@ -89,20 +90,24 @@ public class userPage extends javax.swing.JInternalFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 204, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IconsFolder/profile.png"))); // NOI18N
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, 60));
+
         jPanel2.add(jPanel3);
-        jPanel3.setBounds(540, 0, 160, 60);
+        jPanel3.setBounds(540, 0, 160, 80);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("USER PAGE");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(0, 0, 210, 60);
+        jLabel1.setBounds(0, 10, 210, 60);
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, 744, 60));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, 744, 80));
 
         jScrollPane1.setViewportView(user_table);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 710, 280));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 710, 260));
 
         add.setBackground(new java.awt.Color(255, 204, 255));
         add.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -124,7 +129,7 @@ public class userPage extends javax.swing.JInternalFrame {
         jLabel5.setText("ADD");
         add.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 100, 20));
 
-        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, 40));
+        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, 40));
 
         edit.setBackground(new java.awt.Color(255, 204, 255));
         edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -146,7 +151,7 @@ public class userPage extends javax.swing.JInternalFrame {
         jLabel6.setText("EDIT");
         edit.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 100, 20));
 
-        jPanel1.add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, 40));
+        jPanel1.add(edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, -1, 40));
 
         delete.setBackground(new java.awt.Color(255, 204, 255));
         delete.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -176,7 +181,7 @@ public class userPage extends javax.swing.JInternalFrame {
         });
         delete.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 100, 20));
 
-        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, 40));
+        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, -1, 40));
 
         refresh.setBackground(new java.awt.Color(255, 204, 255));
         refresh.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -198,13 +203,13 @@ public class userPage extends javax.swing.JInternalFrame {
         jLabel8.setText("REFRESH");
         refresh.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 100, 20));
 
-        jPanel1.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, -1, 40));
+        jPanel1.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, -1, 40));
 
         search.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         search.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         search.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         search.setOpaque(false);
-        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 190, 40));
+        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 190, 40));
 
         search_button.setBackground(new java.awt.Color(255, 204, 255));
         search_button.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -223,7 +228,7 @@ public class userPage extends javax.swing.JInternalFrame {
         jLabel9.setText("SEARCH");
         search_button.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 90, -1));
 
-        jPanel1.add(search_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 90, 40));
+        jPanel1.add(search_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, 90, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -346,6 +351,7 @@ public class userPage extends javax.swing.JInternalFrame {
     private javax.swing.JPanel edit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;

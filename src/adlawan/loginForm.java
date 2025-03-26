@@ -5,6 +5,7 @@
  */
 package adlawan;
 
+import config.dbConnector;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import javax.swing.BorderFactory;
@@ -42,6 +43,16 @@ public class loginForm extends javax.swing.JFrame {
      panel.setBorder(empty);
     }
     
+    
+        int validateLogin(){
+        int result;
+        if(username.getText().isEmpty()||pword.getText().isEmpty()){
+            result = 0;
+        }else{
+            result = 1;
+        }
+        return result;
+     }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -58,7 +69,7 @@ public class loginForm extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        user = new javax.swing.JTextField();
+        username = new javax.swing.JTextField();
         pword = new javax.swing.JTextField();
         exit = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -103,11 +114,11 @@ public class loginForm extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(153, 153, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        user.setBackground(new java.awt.Color(153, 153, 255));
-        user.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        user.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3), "Username", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 13))); // NOI18N
-        jPanel3.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 280, 60));
+        username.setBackground(new java.awt.Color(153, 153, 255));
+        username.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        username.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3), "Username", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Century Gothic", 1, 13))); // NOI18N
+        jPanel3.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 280, 60));
 
         pword.setBackground(new java.awt.Color(153, 153, 255));
         pword.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -257,31 +268,10 @@ public class loginForm extends javax.swing.JFrame {
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
         
-    String username = user.getText();
-    String password = pword.getText();
-
+            dashBoard dash = new dashBoard();
+            this.dispose();
+            dash.setVisible(true);
        
-
- 
-   if (user.getText().isEmpty() && pword.getText().isEmpty()) {
-    JOptionPane.showMessageDialog(null, "All Fields Are Required");
-  
-} 
-else if (user.getText().isEmpty()) {
-    JOptionPane.showMessageDialog(null, "Username is required");
-    pword.setText("");
-} 
-else if (pword.getText().isEmpty()) {
-    JOptionPane.showMessageDialog(null, "Password is required");
-    user.setText("");
-} 
-else if (pword.getText().isEmpty()) {
-    JOptionPane.showMessageDialog(null, "Password should have at least 8 characters");
-    pword.setText("");
-} 
-       dashBoard dash = new dashBoard();
-       this.dispose();
-       dash.setVisible(true);
     }//GEN-LAST:event_loginMouseClicked
 
     /**
@@ -337,6 +327,6 @@ else if (pword.getText().isEmpty()) {
     private javax.swing.JPanel login;
     private javax.swing.JLabel minimize;
     private javax.swing.JTextField pword;
-    private javax.swing.JTextField user;
+    private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 }
